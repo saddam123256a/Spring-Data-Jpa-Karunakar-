@@ -22,6 +22,17 @@ public class Address {
 //        this.country = country;
 //        this.zipCode = zipCode;
 //    }
+    @OneToOne(fetch=FetchType.EAGER,cascade = CascadeType.ALL)
+    @JoinColumn(name="order_id",referencedColumnName = "id")
+    private  Order order;
+
+    public Order getOrder() {
+        return order;
+    }
+
+    public void setOrder(Order order) {
+        this.order = order;
+    }
 
     public Long getId() {
         return id;

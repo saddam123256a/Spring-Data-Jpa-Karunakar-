@@ -12,8 +12,6 @@ import java.math.BigDecimal;
 public class OneToOneUnidirectionalTest {
 @Autowired
     private OrderRepository orderRepository;
-@Autowired
-private AddressRepository addressRepository;
 @Test
 void saveOrderMethod(){
 Order order=new Order();

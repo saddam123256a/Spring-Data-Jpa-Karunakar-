@@ -21,8 +21,8 @@ public class Order {
    private Date lastUpdated;
 
    //Unidirection
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="billing_address_id",referencedColumnName = "id")
+    @OneToOne(cascade = CascadeType.ALL,mappedBy = "order",fetch = FetchType.EAGER)
+    //@JoinColumn(name="billing_address_id",referencedColumnName = "id")
     private Address address;
 
     public Address getAddress() {
